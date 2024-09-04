@@ -7,7 +7,7 @@ $expected_token = hash_hmac('sha256', $expiry_time, $secret_key);
 
 if (hash_equals($expected_token, $token) && time() < $expiry_time) {
     // Serve the video segment or playlist
-    // Example: readfile('/path/to/segment.ts');
+    // Example: readfile('playlist.m3u8');
     // Or output the m3u8 playlist.
 } else {
     header("HTTP/1.1 403 Forbidden");
